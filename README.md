@@ -1,53 +1,74 @@
-# Salesforce CLI Org Launcher Service Worker
+# Salesforce CLI Org Launcher Companion
 
-Public documentation and service worker source for Salesforce CLI Org Launcher.
+An AI-powered utility, crafted with love by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
 
-This repository intentionally contains only the Manifest V3 service worker layer and documentation. The full extension application, UI, and native-host implementation are not published here.
+This public repository hosts the install files and documentation needed to connect the Chrome Web Store extension to Salesforce CLI on a user's computer.
 
-An AI-powered utility, crafted with ❤️ by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
+Chrome Web Store installs the browser extension. The files in this repository install the local companion native host required by Chrome Native Messaging.
 
-## What Is Included
+## Download
 
-- `src/background.ts`: Chrome Manifest V3 service worker source.
-- `src/types.ts`: Shared message and payload types used by the service worker.
-- `manifest.service-worker-example.json`: Minimal manifest snippet showing the service worker registration and permissions.
-- `docs/SERVICE_WORKER.md`: Service worker architecture, message contract, cache behavior, and security notes.
-- `docs/PRIVACY_POLICY.md`: Privacy policy source.
-- `docs/privacy-policy.html`: GitHub Pages friendly privacy policy page.
+Choose the package for your operating system:
 
-## What Is Not Included
+| Operating system | Download |
+| --- | --- |
+| macOS or Linux | [`downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip`](downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip) |
+| Windows portable install | [`downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip) |
+| Windows installer builder | [`downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip) |
 
-- Popup UI source.
-- Native host source.
-- Release packages.
-- Chrome Web Store assets.
-- Any Salesforce credentials, tokens, or user org data.
+The Windows installer builder creates `SalesforceCliOrgLauncherCompanionSetup.exe` on a Windows machine with Inno Setup 6 installed.
+
+## Quick Install
+
+1. Install **Salesforce CLI Org Launcher** from the Chrome Web Store.
+2. Install Node.js 20 or later.
+3. Install Salesforce CLI and authenticate at least one org.
+4. Download the companion ZIP for your operating system from this repository.
+5. Unzip it and run the included install script.
+6. Open the Chrome extension and click **Refresh**.
+
+Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
+
+## Chrome Extension ID
+
+The companion packages are configured for the submitted Chrome Web Store extension ID:
+
+```text
+nmjgfcdchchicaophfglfeijceibpkde
+```
+
+## What This Repo Includes
+
+- End-user companion install ZIP files for macOS, Linux, and Windows.
+- Windows installer-builder source for generating a one-click `.exe`.
+- Native messaging setup documentation.
+- Privacy policy hosted through GitHub Pages.
+- Public service worker source and documentation for transparency.
+
+## What This Repo Does Not Include
+
+- Salesforce passwords, OAuth tokens, or org secrets.
+- Full private extension application source.
+- User Salesforce org data.
+- Analytics, ads, or remote code.
 
 ## Required Chrome Permissions
 
-The service worker expects only these Chrome permissions:
+The extension uses only:
 
-- `storage`: Saves local settings and cached org metadata.
-- `nativeMessaging`: Communicates with the installed local companion native host.
+- `storage`: saves local preferences, favorites, groups, and cached org metadata.
+- `nativeMessaging`: communicates with the installed local companion native host.
 
-The extension does not require broad website permissions such as `<all_urls>`.
+The extension does not require broad website access such as "Read and change all your data on all websites."
 
-## Privacy Policy Hosting
+## Useful Docs
 
-After GitHub Pages is enabled for this repository, the privacy policy can be hosted from:
+- [Install and connect guide](docs/INSTALL_AND_CONNECT.md)
+- [User guide](docs/USER_GUIDE.md)
+- [Service worker documentation](docs/SERVICE_WORKER.md)
+- [Privacy policy](docs/PRIVACY_POLICY.md)
+- [Privacy policy page](docs/privacy-policy.html)
 
-```text
-https://kiranvm143.github.io/salesforce-cli-org-launcher-service-worker/docs/privacy-policy.html
-```
+## Repository Protection
 
-## Main Branch Protection
-
-This public repository should be readable by everyone, but only trusted maintainers should be able to merge changes into `main`.
-
-Recommended GitHub settings:
-
-- Enable branch protection for `main`.
-- Require pull requests before merging.
-- Require at least one approval before merge.
-- Disable force pushes.
-- Do not grant write access to untrusted users.
+This repository is public so users can download install files and read documentation. Changes to `main` should go through pull requests and maintainer approval.
