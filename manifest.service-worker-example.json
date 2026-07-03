@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Salesforce CLI Org Launcher",
+  "description": "Launch Salesforce CLI authenticated orgs grouped by local project.",
+  "version": "0.1.12",
+  "permissions": ["storage", "nativeMessaging"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

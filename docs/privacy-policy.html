@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salesforce CLI Org Launcher Privacy Policy</title>
+    <style>
+      :root {
+        --ink: #182226;
+        --muted: #5f6f73;
+        --paper: #fffaf0;
+        --line: rgba(24, 34, 38, 0.14);
+        --teal: #0e6f73;
+        --sage: #5f7f68;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at 15% 0%, rgba(244, 199, 102, 0.28), transparent 30%),
+          radial-gradient(circle at 85% 12%, rgba(14, 111, 115, 0.2), transparent 32%),
+          #f6efe3;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 72px 24px;
+      }
+
+      article {
+        padding: 46px;
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background: rgba(255, 250, 240, 0.86);
+        box-shadow: 0 30px 90px rgba(33, 44, 42, 0.14);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 9px 13px;
+        border-radius: 999px;
+        background: rgba(14, 111, 115, 0.1);
+        color: var(--teal);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(42px, 6vw, 70px);
+        line-height: 0.96;
+        letter-spacing: -0.06em;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 22px;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+
+      a {
+        color: var(--teal);
+        font-weight: 800;
+      }
+
+      .summary {
+        margin: 22px 0;
+        padding: 20px;
+        border-radius: 24px;
+        background: rgba(95, 127, 104, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <span class="badge">Privacy Policy</span>
+        <h1>Salesforce CLI Org Launcher</h1>
+        <p>Effective date: July 3, 2026</p>
+
+        <div class="summary">
+          <p>
+            Salesforce CLI Org Launcher is a local-first Chrome extension for launching Salesforce CLI authenticated orgs.
+            It does not sell user data, display ads, or use third-party analytics.
+          </p>
+        </div>
+
+        <h2>Data the Extension Handles</h2>
+        <p>The extension may display and locally cache Salesforce CLI org metadata available on the user's machine, including org aliases, usernames, org IDs, instance URLs, project names, and Salesforce CLI status information.</p>
+        <p>The extension also stores local preferences such as favorites, custom org groups, expanded UI sections, theme preference, project root folders, and cache duration.</p>
+
+        <h2>How Data Is Stored</h2>
+        <p>Extension settings and cached org metadata are stored in Chrome extension local storage on the user's device.</p>
+        <p>The companion native host runs locally and communicates with the extension through Chrome Native Messaging. The native host uses Salesforce CLI installed on the same machine.</p>
+
+        <h2>Data Sharing</h2>
+        <p>The extension does not transmit Salesforce org metadata to the developer, to third-party analytics providers, or to advertising networks.</p>
+        <p>When a user opens an org, Salesforce CLI and the user's browser may communicate with Salesforce services as part of the normal Salesforce authentication and org-opening flow.</p>
+
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>storage</strong>: saves local preferences and cached org metadata.</li>
+          <li><strong>nativeMessaging</strong>: communicates with the installed local companion native host.</li>
+        </ul>
+        <p>The extension does not request permission to read or change data on all websites.</p>
+
+        <h2>Companion Native Host</h2>
+        <p>Chrome extensions cannot silently install native messaging hosts. Users must install the companion native host once per machine. The native host runs locally and is required for Salesforce CLI integration.</p>
+
+        <h2>Data Removal</h2>
+        <p>Users can remove stored extension data by uninstalling the extension from Chrome. Users can also uninstall the companion native host using the platform-specific uninstall process or by removing the installed native host files and registry or manifest entry.</p>
+
+        <h2>Contact</h2>
+        <p>Created by Kiran Markad. LinkedIn: <a href="https://www.linkedin.com/in/kiranmarkad">https://www.linkedin.com/in/kiranmarkad</a></p>
+      </article>
+    </main>
+  </body>
+</html>
