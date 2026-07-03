@@ -37,7 +37,7 @@ The extension does not require broad website permissions such as `<all_urls>`.
 After GitHub Pages is enabled for this repository, the privacy policy can be hosted from:
 
 ```text
-https://kiranmarkad.github.io/salesforce-cli-org-launcher-service-worker/docs/privacy-policy.html
+https://kiranvm143.github.io/salesforce-cli-org-launcher-service-worker/docs/privacy-policy.html
 ```
 
 ## Main Branch Protection
