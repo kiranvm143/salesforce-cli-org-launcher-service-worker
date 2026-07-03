@@ -6,6 +6,16 @@ This public repository hosts the install files and documentation needed to conne
 
 Chrome Web Store installs the browser extension. The files in this repository install the local companion native host required by Chrome Native Messaging.
 
+## Public Homepage
+
+The GitHub Pages homepage for the full extension experience lives at:
+
+```text
+docs/index.html
+```
+
+It presents the extension as a product page with screenshots, install flow, downloads, privacy notes, and user guidance.
+
 ## Download
 
 Choose the package for your operating system:
@@ -65,6 +75,7 @@ The extension does not require broad website access such as "Read and change all
 
 - [Install and connect guide](docs/INSTALL_AND_CONNECT.md)
 - [User guide](docs/USER_GUIDE.md)
+- [Extension homepage](docs/index.html)
 - [Service worker documentation](docs/SERVICE_WORKER.md)
 - [Privacy policy](docs/PRIVACY_POLICY.md)
 - [Privacy policy page](docs/privacy-policy.html)

@@ -90,11 +90,34 @@
         border-radius: 24px;
         background: rgba(95, 127, 104, 0.1);
       }
+
+      .top-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .top-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.46);
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
     <main>
       <article>
+        <div class="top-links">
+          <a href="index.html">Extension Homepage</a>
+          <a href="INSTALL_AND_CONNECT.md">Install Guide</a>
+          <a href="USER_GUIDE.md">User Guide</a>
+        </div>
         <span class="badge">Privacy Policy</span>
         <h1>Salesforce CLI Org Launcher</h1>
         <p>Effective date: July 3, 2026</p>
