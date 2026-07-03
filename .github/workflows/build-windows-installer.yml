@@ -1,0 +1,37 @@
+name: Build Windows Companion Installer
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build-windows-installer:
+    name: Build SalesforceCliOrgLauncherCompanionSetup.exe
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes
+
+      - name: Unpack installer source
+        shell: pwsh
+        run: |
+          Expand-Archive `
+            -Path downloads\SalesforceCliOrgLauncherCompanion-windows-installer-source.zip `
+            -DestinationPath build-windows-installer
+
+      - name: Build installer
+        shell: pwsh
+        run: |
+          cd build-windows-installer\SalesforceOrgLauncher-windows-installer-source\windows-installer
+          powershell -ExecutionPolicy Bypass -File .\build-windows-installer.ps1
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SalesforceCliOrgLauncherCompanionSetup
+          path: build-windows-installer/SalesforceOrgLauncher-windows-installer-source/windows-installer/output/SalesforceCliOrgLauncherCompanionSetup.exe
