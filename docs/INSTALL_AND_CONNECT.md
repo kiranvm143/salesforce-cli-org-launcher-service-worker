@@ -56,7 +56,15 @@ nmjgfcdchchicaophfglfeijceibpkde
 
 ## Step 3: Install the Companion Native Host
 
-Download the correct file from this repository's `downloads` folder.
+Run this command from Terminal, PowerShell, or Command Prompt:
+
+```bash
+npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
+```
+
+The installer detects macOS, Windows, or Linux and runs the correct companion setup automatically.
+
+If your company blocks `npx` or GitHub package installs, use the manual files from this repository's `downloads` folder.
 
 ### macOS
 
@@ -171,7 +179,11 @@ If these commands fail, install or fix Salesforce CLI first. Then rerun the comp
 
 ### Native Host Not Detected
 
-Rerun the companion installer for your operating system, then restart Chrome.
+Rerun the one-command installer, then restart Chrome:
+
+```bash
+npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
+```
 
 ### Org Does Not Open
 

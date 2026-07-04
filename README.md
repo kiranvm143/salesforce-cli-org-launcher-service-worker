@@ -33,9 +33,15 @@ The Windows installer builder creates `SalesforceCliOrgLauncherCompanionSetup.ex
 1. Install **Salesforce CLI Org Launcher** from the Chrome Web Store.
 2. Install Node.js 20 or later.
 3. Install Salesforce CLI and authenticate at least one org.
-4. Download the companion ZIP for your operating system from this repository.
-5. Unzip it and run the included install script.
-6. Open the Chrome extension and click **Refresh**.
+4. Run the one-command companion installer:
+
+```bash
+npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
+```
+
+5. Open the Chrome extension and click **Refresh**.
+
+The command detects macOS, Windows, or Linux and runs the correct bundled installer. The ZIP files below remain available for manual installation or managed IT distribution.
 
 Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
 
@@ -50,6 +56,7 @@ nmjgfcdchchicaophfglfeijceibpkde
 ## What This Repo Includes
 
 - End-user companion install ZIP files for macOS, Linux, and Windows.
+- A Node.js `npx` installer that chooses the right companion package for the current operating system.
 - Windows installer-builder source for generating a one-click `.exe`.
 - Native messaging setup documentation.
 - Privacy policy hosted through GitHub Pages.
