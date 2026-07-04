@@ -22,13 +22,22 @@ Use these ZIP files for manual install, offline install, or managed distribution
 | `SalesforceCliOrgLauncherCompanion-windows-portable.zip` | End-user portable companion installer for Windows using PowerShell. |
 | `SalesforceCliOrgLauncherCompanion-windows-installer-source.zip` | Windows installer project for building `SalesforceCliOrgLauncherCompanionSetup.exe` with Inno Setup 6. |
 
-## Extension ID
+## Extension IDs
 
-These packages default to the Chrome Web Store extension ID:
+These packages default to the published Chrome Web Store extension ID:
 
 ```text
 nmjgfcdchchicaophfglfeijceibpkde
 ```
+
+They also allow the known launcher IDs used for previous builds and local validation:
+
+```text
+kanjinfiojebibldeeajnbmgjmdipjjn
+aigfbbnieiipffbjinoccnbocfhlkepm
+```
+
+If users see **CLI not detected**, reinstall the companion package so Chrome's native messaging manifest is refreshed with the current allowlist.
 
 ## Install Guide
 
