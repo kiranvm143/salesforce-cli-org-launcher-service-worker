@@ -41,14 +41,14 @@ sf org login web --alias my-org
 
 ## Step 2: Install the Chrome Extension
 
-After the extension is approved and published:
+After the extension is available in Chrome Web Store:
 
 1. Open the Chrome Web Store listing for Salesforce CLI Org Launcher.
 2. Click **Add to Chrome**.
 3. Confirm the Chrome install prompt.
 4. Pin the extension from Chrome's Extensions menu if desired.
 
-Chrome Web Store extension ID:
+Published Chrome Web Store extension ID:
 
 ```text
 nmjgfcdchchicaophfglfeijceibpkde
@@ -63,6 +63,16 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 ```
 
 The installer detects macOS, Windows, or Linux and runs the correct companion setup automatically.
+
+The companion installer refreshes Chrome's native messaging manifest for the published Web Store extension and known launcher builds:
+
+```text
+nmjgfcdchchicaophfglfeijceibpkde
+kanjinfiojebibldeeajnbmgjmdipjjn
+aigfbbnieiipffbjinoccnbocfhlkepm
+```
+
+If the extension shows **CLI not detected**, rerun the companion installer and then click **Refresh** in the extension. This updates the native messaging allowlist without requiring broad website permissions.
 
 If your company blocks `npx` or GitHub package installs, use the manual files from this repository's `downloads` folder.
 

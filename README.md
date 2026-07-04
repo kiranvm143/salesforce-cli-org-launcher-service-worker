@@ -45,13 +45,22 @@ The command detects macOS, Windows, or Linux and runs the correct bundled instal
 
 Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
 
-## Chrome Extension ID
+## Chrome Extension IDs
 
-The companion packages are configured for the submitted Chrome Web Store extension ID:
+The companion packages are configured for the published Chrome Web Store extension ID:
 
 ```text
 nmjgfcdchchicaophfglfeijceibpkde
 ```
+
+For safe upgrades and local testing, the companion installer also allows these known launcher IDs:
+
+```text
+kanjinfiojebibldeeajnbmgjmdipjjn
+aigfbbnieiipffbjinoccnbocfhlkepm
+```
+
+If the extension shows **CLI not detected** after install, rerun the one-command companion installer and then click **Refresh** in the extension.
 
 ## What This Repo Includes
 
