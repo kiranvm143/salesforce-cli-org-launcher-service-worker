@@ -1,0 +1,27 @@
+{
+  "name": "salesforce-cli-org-launcher-companion",
+  "version": "0.1.0",
+  "private": false,
+  "description": "One-command installer for the Salesforce CLI Org Launcher companion native host.",
+  "type": "module",
+  "bin": {
+    "salesforce-cli-org-launcher-companion": "./bin/install-companion.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "bin",
+    "downloads",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "salesforce",
+    "chrome-extension",
+    "native-messaging",
+    "salesforce-cli"
+  ],
+  "license": "MIT"
+}
