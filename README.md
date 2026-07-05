@@ -23,10 +23,11 @@ Choose the package for your operating system:
 | Operating system | Download |
 | --- | --- |
 | macOS or Linux | [`downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip`](downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip) |
+| Windows one-click installer | [`downloads/SalesforceCliOrgLauncherCompanionSetup.exe`](downloads/SalesforceCliOrgLauncherCompanionSetup.exe) |
 | Windows portable install | [`downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip) |
 | Windows installer builder | [`downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip) |
 
-The Windows installer builder creates `SalesforceCliOrgLauncherCompanionSetup.exe` on a Windows machine with Inno Setup 6 installed.
+Most Windows users should use `SalesforceCliOrgLauncherCompanionSetup.exe`. The installer builder source is kept for managed IT teams that want to rebuild the installer themselves.
 
 ## Quick Install
 
@@ -66,7 +67,7 @@ If the extension shows **CLI not detected** after install, rerun the one-command
 
 - End-user companion install ZIP files for macOS, Linux, and Windows.
 - A Node.js `npx` installer that chooses the right companion package for the current operating system.
-- Windows installer-builder source for generating a one-click `.exe`.
+- A one-click Windows `.exe` installer and installer-builder source for managed distribution.
 - Native messaging setup documentation.
 - Privacy policy hosted through GitHub Pages.
 - Public service worker source and documentation for transparency.

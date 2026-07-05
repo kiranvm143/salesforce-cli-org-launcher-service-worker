@@ -14,13 +14,14 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 
 The command detects macOS, Windows, or Linux and runs the correct bundled installer. On Windows, the latest installer also smoke-tests the installed native host before finishing.
 
-Use these ZIP files for manual install, offline install, or managed distribution:
+Use these files for manual install, offline install, or managed distribution:
 
 | File | Use |
 | --- | --- |
+| `SalesforceCliOrgLauncherCompanionSetup.exe` | Recommended one-click Windows companion installer. |
 | `SalesforceCliOrgLauncherCompanion-mac-linux.zip` | End-user companion installer for macOS and Linux. |
 | `SalesforceCliOrgLauncherCompanion-windows-portable.zip` | End-user portable companion installer for Windows using PowerShell. |
-| `SalesforceCliOrgLauncherCompanion-windows-installer-source.zip` | Windows installer project for building `SalesforceCliOrgLauncherCompanionSetup.exe` with Inno Setup 6. |
+| `SalesforceCliOrgLauncherCompanion-windows-installer-source.zip` | Advanced Windows installer project for rebuilding `SalesforceCliOrgLauncherCompanionSetup.exe` with Inno Setup 6. |
 
 ## Extension IDs
 

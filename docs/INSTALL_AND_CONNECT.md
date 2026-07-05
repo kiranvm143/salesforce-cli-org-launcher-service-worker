@@ -112,6 +112,24 @@ chmod +x install-mac-linux.sh
 ./install-mac-linux.sh
 ```
 
+### Windows One-Click Installer
+
+Recommended for most Windows users.
+
+Download:
+
+```text
+downloads/SalesforceCliOrgLauncherCompanionSetup.exe
+```
+
+Install:
+
+1. Double-click `SalesforceCliOrgLauncherCompanionSetup.exe`.
+2. Complete the installer.
+3. Open Chrome and click **Refresh** in the extension.
+
+The installer does not require administrator rights.
+
 ### Windows Portable Install
 
 Download:
@@ -128,7 +146,7 @@ cd .\SalesforceCliOrgLauncherCompanion-windows-portable\SalesforceCliOrgLauncher
 powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
 ```
 
-### Windows One-Click EXE Builder
+### Windows EXE Builder
 
 Download:
 
@@ -154,7 +172,7 @@ The output will be:
 output\SalesforceCliOrgLauncherCompanionSetup.exe
 ```
 
-You can distribute that `.exe` to Windows users after testing it in your environment.
+Use this only if your IT team wants to rebuild the Windows installer from source.
 
 ## Step 4: Open and Refresh
 
