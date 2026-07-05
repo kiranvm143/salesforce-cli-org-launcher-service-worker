@@ -187,7 +187,7 @@ sf org list
 
 If these commands fail, install or fix Salesforce CLI first. Then rerun the companion installer and reopen Chrome.
 
-On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion resolves `sf` with `where`, runs CLI commands through `cmd.exe`, and saves the install-time PATH for Chrome native messaging.
+On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion resolves `sf` with `where`, prefers runnable Windows shims such as `sf.cmd`, runs CLI commands through `cmd.exe`, and saves the install-time PATH for Chrome native messaging.
 
 The Windows installer now prints a smoke-test result like:
 
