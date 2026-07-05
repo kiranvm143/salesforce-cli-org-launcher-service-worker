@@ -1,6 +1,6 @@
 # Salesforce CLI Org Launcher Companion
 
-An AI-powered utility, crafted with love by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
+Crafted with love by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
 
 This public repository hosts the install files and documentation needed to connect the Chrome Web Store extension to Salesforce CLI on a user's computer.
 

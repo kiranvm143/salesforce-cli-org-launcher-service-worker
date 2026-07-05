@@ -1,6 +1,6 @@
 # Install and Connect Salesforce CLI Org Launcher
 
-An AI-powered utility, crafted with love by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
+Crafted with love by [Kiran Markad](https://www.linkedin.com/in/kiranmarkad).
 
 This guide explains how to install the Chrome extension, install the local companion native host, connect Salesforce CLI, and start opening orgs.
 
