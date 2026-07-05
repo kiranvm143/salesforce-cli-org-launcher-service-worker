@@ -62,7 +62,7 @@ Run this command from Terminal, PowerShell, or Command Prompt:
 npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 ```
 
-The installer detects macOS, Windows, or Linux and runs the correct companion setup automatically.
+The installer detects macOS, Windows, or Linux and runs the correct companion setup automatically. On Windows, it also runs a native-host smoke test so CLI detection problems are caught during install instead of only inside Chrome.
 
 The companion installer refreshes Chrome's native messaging manifest for the published Web Store extension and known launcher builds:
 
@@ -72,7 +72,7 @@ kanjinfiojebibldeeajnbmgjmdipjjn
 aigfbbnieiipffbjinoccnbocfhlkepm
 ```
 
-If the extension shows **CLI not detected**, rerun the companion installer and then click **Refresh** in the extension. This updates the native messaging allowlist without requiring broad website permissions.
+If the extension shows **CLI not detected**, rerun the companion installer and then fully reopen Chrome before clicking **Refresh** in the extension. The latest Windows companion saves the installer PATH and reuses it when Chrome starts the native host, which helps when `sf` works in Command Prompt but Chrome was opened with an older PATH.
 
 If your company blocks `npx` or GitHub package installs, use the manual files from this repository's `downloads` folder.
 
@@ -187,7 +187,20 @@ sf org list
 
 If these commands fail, install or fix Salesforce CLI first. Then rerun the companion installer and reopen Chrome.
 
-On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion runs Salesforce CLI through the Windows shell so Chrome can detect the same CLI command that works in `cmd`.
+On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion resolves `sf` with `where`, runs CLI commands through `cmd.exe`, and saves the install-time PATH for Chrome native messaging.
+
+The Windows installer now prints a smoke-test result like:
+
+```json
+{"installed":true,"cli":"sf","version":"..."}
+```
+
+If that smoke test fails, check these logs:
+
+```text
+%USERPROFILE%\.salesforce-org-launcher\host-runner.log
+%USERPROFILE%\.salesforce-org-launcher\launcher.log
+```
 
 ### Native Host Not Detected
 

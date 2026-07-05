@@ -12,7 +12,7 @@ Most users should install with the one-command installer from the repository roo
 npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 ```
 
-The command detects macOS, Windows, or Linux and runs the correct bundled installer.
+The command detects macOS, Windows, or Linux and runs the correct bundled installer. On Windows, the latest installer also smoke-tests the installed native host before finishing.
 
 Use these ZIP files for manual install, offline install, or managed distribution:
 
@@ -37,9 +37,15 @@ kanjinfiojebibldeeajnbmgjmdipjjn
 aigfbbnieiipffbjinoccnbocfhlkepm
 ```
 
-If users see **CLI not detected**, reinstall the companion package so Chrome's native messaging manifest is refreshed with the current allowlist.
+If users see **CLI not detected**, reinstall the companion package so Chrome's native messaging manifest is refreshed with the current allowlist, then fully close and reopen Chrome before clicking **Refresh**.
 
-On Windows, the refreshed packages also detect Salesforce CLI through the Windows shell. This fixes cases where `sf --version` works in Command Prompt but Chrome's native host could not resolve `sf.cmd`.
+On Windows, the refreshed packages also detect Salesforce CLI through `where`, run Salesforce CLI through `cmd.exe`, and save the install-time PATH for Chrome native messaging. This fixes cases where `sf --version` works in Command Prompt but Chrome's native host could not resolve `sf.cmd` or inherited an older PATH from Chrome.
+
+Successful Windows installs print a smoke-test result like:
+
+```json
+{"installed":true,"cli":"sf","version":"..."}
+```
 
 ## Install Guide
 

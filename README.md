@@ -41,7 +41,7 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 
 5. Open the Chrome extension and click **Refresh**.
 
-The command detects macOS, Windows, or Linux and runs the correct bundled installer. The ZIP files below remain available for manual installation or managed IT distribution.
+The command detects macOS, Windows, or Linux and runs the correct bundled installer. On Windows it also smoke-tests the native host and Salesforce CLI detection before finishing. The ZIP files below remain available for manual installation or managed IT distribution.
 
 Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
 
@@ -60,7 +60,7 @@ kanjinfiojebibldeeajnbmgjmdipjjn
 aigfbbnieiipffbjinoccnbocfhlkepm
 ```
 
-If the extension shows **CLI not detected** after install, rerun the one-command companion installer and then click **Refresh** in the extension.
+If the extension shows **CLI not detected** after install, rerun the one-command companion installer, fully close and reopen Chrome, and then click **Refresh** in the extension. The current Windows companion saves the installer PATH so Chrome native messaging can find the same `sf` command that works in Command Prompt or PowerShell.
 
 ## What This Repo Includes
 
