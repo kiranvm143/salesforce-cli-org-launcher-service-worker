@@ -39,6 +39,8 @@ aigfbbnieiipffbjinoccnbocfhlkepm
 
 If users see **CLI not detected**, reinstall the companion package so Chrome's native messaging manifest is refreshed with the current allowlist.
 
+On Windows, the refreshed packages also detect Salesforce CLI through the Windows shell. This fixes cases where `sf --version` works in Command Prompt but Chrome's native host could not resolve `sf.cmd`.
+
 ## Install Guide
 
 Read the complete setup guide:
