@@ -70,7 +70,7 @@ kanjinfiojebibldeeajnbmgjmdipjjn
 aigfbbnieiipffbjinoccnbocfhlkepm
 ```
 
-If the extension shows **CLI not detected** after install, rerun the one-command companion installer, fully close and reopen Chrome, and then click **Refresh** in the extension. The current Windows companion saves the installer PATH so Chrome native messaging can find the same `sf` command that works in Command Prompt or PowerShell.
+If the extension shows **CLI not detected** after install, rerun the one-command companion installer, fully close and reopen Chrome, and then click **Refresh** in the extension. The current Windows companion saves the installer PATH so Chrome native messaging can find the same `sf` command that works in Command Prompt or PowerShell. It also quotes Salesforce CLI paths installed under folders such as `C:\Program Files\sf\bin\sf.cmd`, fixing smoke-test errors like `'C:\Program' is not recognized`.
 
 ## What This Repo Includes
 
