@@ -42,7 +42,7 @@ aigfbbnieiipffbjinoccnbocfhlkepm
 
 If users see **CLI not detected**, reinstall the companion package so Chrome's native messaging manifest is refreshed with the current allowlist, then fully close and reopen Chrome before clicking **Refresh**.
 
-On Windows, the refreshed packages also detect Salesforce CLI through `where`, prefer runnable shims such as `sf.cmd`, run Salesforce CLI through `cmd.exe`, quote paths with spaces such as `C:\Program Files\sf\bin\sf.cmd`, and save the install-time PATH for Chrome native messaging. This fixes cases where `sf --version` works in Command Prompt but Chrome's native host resolved the extensionless npm shim, inherited an older PATH from Chrome, or failed with `'C:\Program' is not recognized`.
+On Windows, the refreshed packages also detect Salesforce CLI through `where`, save the install-time PATH for Chrome native messaging, and validate with `sf --version` through `PATH` instead of calling an absolute npm shim path. This fixes cases where `sf --version` works in Command Prompt but Chrome's native host resolved a quoted `.cmd` shim such as `C:\Users\...\AppData\Roaming\npm\sf.cmd` or `C:\Program Files\sf\bin\sf.cmd` and failed with a “not recognized” error.
 
 Successful Windows installs print a smoke-test result like:
 
