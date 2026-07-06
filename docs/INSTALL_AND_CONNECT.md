@@ -72,7 +72,7 @@ kanjinfiojebibldeeajnbmgjmdipjjn
 aigfbbnieiipffbjinoccnbocfhlkepm
 ```
 
-If the extension shows **CLI not detected**, rerun the companion installer and then fully reopen Chrome before clicking **Refresh** in the extension. The latest Windows companion saves the installer PATH and reuses it when Chrome starts the native host, which helps when `sf` works in Command Prompt but Chrome was opened with an older PATH. It also quotes Salesforce CLI paths installed under `C:\Program Files`, so smoke tests no longer fail with `'C:\Program' is not recognized`.
+If the extension shows **CLI not detected**, rerun the companion installer and then fully reopen Chrome before clicking **Refresh** in the extension. The latest Windows companion saves the installer PATH and reuses it when Chrome starts the native host, which helps when `sf` works in Command Prompt but Chrome was opened with an older PATH. It also avoids calling absolute quoted `.cmd` shim paths during validation, so smoke tests no longer fail with errors like `'"C:\Users\...\npm\sf.cmd"' is not recognized` or `'"C:\Program Files\sf\bin\sf.cmd"' is not recognized`.
 
 If your company blocks `npx` or GitHub package installs, use the manual files from this repository's `downloads` folder.
 
@@ -205,7 +205,7 @@ sf org list
 
 If these commands fail, install or fix Salesforce CLI first. Then rerun the companion installer and reopen Chrome.
 
-On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion resolves `sf` with `where`, prefers runnable Windows shims such as `sf.cmd`, runs CLI commands through `cmd.exe` with quoted executable paths, and saves the install-time PATH for Chrome native messaging. This covers Salesforce CLI installs under `C:\Program Files`, including errors like `'C:\Program' is not recognized`.
+On Windows, Salesforce CLI is often installed as `sf.cmd` or `sfdx.cmd`. If `sf --version` works in Command Prompt but the extension still says **CLI not detected**, reinstall the latest companion package from this repository. The updated companion confirms `sf` exists with `where`, runs validation as `sf --version` through `PATH`, and saves the install-time PATH for Chrome native messaging. This covers npm shim installs and Salesforce CLI installs under `C:\Program Files`.
 
 The Windows installer now prints a smoke-test result like:
 

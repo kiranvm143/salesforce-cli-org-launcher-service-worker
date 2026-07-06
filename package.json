@@ -1,6 +1,6 @@
 {
   "name": "salesforce-cli-org-launcher-companion",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "private": false,
   "description": "One-command installer for the Salesforce CLI Org Launcher companion native host.",
   "type": "module",
