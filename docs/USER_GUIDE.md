@@ -11,6 +11,19 @@ Salesforce CLI Org Launcher helps you open Salesforce CLI authenticated orgs fro
 
 The extension opens the selected org in a new Chrome tab.
 
+Search updates results while you type and keeps keyboard focus in the search box.
+
+## Org Actions
+
+Each org card can show these actions depending on the org status:
+
+- **Open**: opens the org through Salesforce CLI.
+- **Open Setup**: opens Salesforce Setup for that org.
+- **Authorize Again**: starts Salesforce CLI web login for expired or unreachable orgs.
+- **Check Again**: refreshes only org connection status.
+- **Remove Org**: removes the local Salesforce CLI authorization after confirmation. This does not delete the Salesforce org.
+- Copy buttons: copy username, org ID, or instance URL.
+
 ## Refreshing Orgs
 
 Click **Refresh** when:
@@ -43,6 +56,7 @@ Create and manage groups from **Settings**. After a group is created, add orgs t
 
 Use **Settings** to manage:
 
+- Auth new org through Salesforce CLI web auth.
 - Project root folders.
 - Theme.
 - Cache duration.
@@ -53,15 +67,17 @@ Project roots tell the companion host where to look for local Salesforce project
 
 ## Expired Orgs
 
-Expired orgs may still appear because Salesforce CLI can remember old aliases. If you click **Open** and the org is expired, the extension shows a reauthorization message instead of silently failing.
+Expired orgs may still appear because Salesforce CLI can remember old aliases. The extension shows a status badge, disables unsafe open actions, and offers **Authorize Again** where possible.
 
-Reauthorize the org:
+You can reauthorize from the org card, or use Salesforce CLI directly:
 
 ```bash
 sf org login web --alias my-org
 ```
 
 Then click **Refresh**.
+
+If a previous Salesforce CLI login is still occupying OAuth port `1717`, the companion can stop that stale `sf org login web` process and start the new login automatically.
 
 ## Privacy
 
