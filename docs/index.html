@@ -564,7 +564,7 @@
           </article>
           <article class="feature">
             <h3>Search everything fast</h3>
-            <p>Search aliases, usernames, project names, instance URLs, and org IDs from one compact launcher.</p>
+            <p>Search aliases, usernames, project names, instance URLs, and org IDs from one compact launcher without losing keyboard focus.</p>
           </article>
           <article class="feature">
             <h3>Favorites and custom groups</h3>
@@ -576,7 +576,11 @@
           </article>
           <article class="feature">
             <h3>Graceful expired-org handling</h3>
-            <p>If a CLI auth session is expired, the launcher shows a clear error so the user can reauthorize instead of guessing.</p>
+            <p>Status badges identify connected, expired, and unreachable orgs. Users can reauthorize from the card instead of guessing.</p>
+          </article>
+          <article class="feature">
+            <h3>Setup and auth actions</h3>
+            <p>Open Salesforce Setup, authorize a new org from Settings, or remove a local CLI auth entry after confirmation.</p>
           </article>
         </div>
       </section>
@@ -619,7 +623,7 @@
               Most users can install with one command. The manual packages remain available for managed distribution and offline setup.
               These installers target the published extension ID
               <strong>nmjgfcdchchicaophfglfeijceibpkde</strong>, include compatibility allowlist entries for prior launcher builds,
-              and save the install-time PATH on Windows so Chrome can find Salesforce CLI reliably.
+              save the install-time PATH on Windows, and recover from stale Salesforce CLI web-auth processes on OAuth port 1717.
             </p>
           </div>
         </div>

@@ -46,6 +46,15 @@ The command detects macOS, Windows, or Linux and runs the correct bundled instal
 
 Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
 
+## Current Extension Highlights
+
+- Search stays focused while filtering orgs by alias, username, project, URL, or org ID.
+- Org cards show connection status and disable unsafe open actions when an org is expired or unreachable.
+- **Open Setup** launches Salesforce Setup for an authenticated org.
+- **Auth New Org** in Settings starts Salesforce CLI web auth for Production, Sandbox, or a custom URL.
+- **Remove Org** logs out the local Salesforce CLI authorization entry after confirmation.
+- If Salesforce CLI OAuth port `1717` is occupied by an older `sf org login web` process, the companion stops that stale auth process and starts the new login.
+
 ## Chrome Extension IDs
 
 The companion packages are configured for the published Chrome Web Store extension ID:

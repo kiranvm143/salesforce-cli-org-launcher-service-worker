@@ -14,6 +14,8 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 
 The command detects macOS, Windows, or Linux and runs the correct bundled installer. On Windows, the latest installer also smoke-tests the installed native host before finishing.
 
+The current companion also supports the extension's **Auth New Org**, **Authorize Again**, **Open Setup**, and **Remove Org** actions. If Salesforce CLI OAuth port `1717` is occupied by an older Salesforce CLI web-auth process, the companion stops that stale auth process before starting the new login.
+
 Use these files for manual install, offline install, or managed distribution:
 
 | File | Use |
