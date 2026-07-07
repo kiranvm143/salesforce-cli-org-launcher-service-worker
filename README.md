@@ -31,7 +31,7 @@ Most Windows users should use `SalesforceCliOrgLauncherCompanionSetup.exe`. The 
 
 ## Quick Install
 
-1. Install **Salesforce CLI Org Launcher** from the Chrome Web Store.
+1. Install **Salesforce CLI Org Launcher** from the [Chrome Web Store](https://chromewebstore.google.com/detail/salesforce-cli-org-launch/nmjgfcdchchicaophfglfeijceibpkde).
 2. Install Node.js 20 or later.
 3. Install Salesforce CLI and authenticate at least one org.
 4. Run the one-command companion installer:
