@@ -41,9 +41,9 @@ sf org login web --alias my-org
 
 ## Step 2: Install the Chrome Extension
 
-After the extension is available in Chrome Web Store:
+Install the extension from Chrome Web Store:
 
-1. Open the Chrome Web Store listing for Salesforce CLI Org Launcher.
+1. Open the [Salesforce CLI Org Launcher listing](https://chromewebstore.google.com/detail/salesforce-cli-org-launch/nmjgfcdchchicaophfglfeijceibpkde).
 2. Click **Add to Chrome**.
 3. Confirm the Chrome install prompt.
 4. Pin the extension from Chrome's Extensions menu if desired.
