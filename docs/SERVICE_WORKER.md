@@ -72,7 +72,8 @@ Native host request:
 ```json
 {
   "action": "listProjects",
-  "roots": ["~/Projects", "~/Development", "~/workspace", "~/Documents"]
+  "roots": ["~/Projects", "~/Development", "~/workspace"],
+  "scanProjectRoots": false
 }
 ```
 
@@ -112,7 +113,8 @@ Default settings:
 
 ```ts
 {
-  roots: ["~/Projects", "~/Development", "~/workspace", "~/Documents"],
+  roots: ["~/Projects", "~/Development", "~/workspace"],
+  scanProjectRoots: false,
   theme: "system",
   autoRefresh: true,
   cacheDurationMinutes: 15

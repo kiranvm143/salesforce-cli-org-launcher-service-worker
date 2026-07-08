@@ -6,12 +6,13 @@
     <title>Salesforce CLI Org Launcher Privacy Policy</title>
     <style>
       :root {
-        --ink: #182226;
-        --muted: #5f6f73;
-        --paper: #fffaf0;
-        --line: rgba(24, 34, 38, 0.14);
-        --teal: #0e6f73;
-        --sage: #5f7f68;
+        --ink: #172431;
+        --muted: #627383;
+        --paper: #edf3f5;
+        --line: rgba(23, 36, 49, 0.12);
+        --accent: #0176d3;
+        --accent-deep: #014486;
+        --accent-soft: rgba(1, 118, 211, 0.1);
       }
 
       * {
@@ -21,11 +22,11 @@
       body {
         margin: 0;
         color: var(--ink);
-        font-family: "Avenir Next", "Segoe UI", sans-serif;
+        font-family: "Salesforce Sans", "Avenir Next", "Segoe UI", sans-serif;
         background:
-          radial-gradient(circle at 15% 0%, rgba(244, 199, 102, 0.28), transparent 30%),
-          radial-gradient(circle at 85% 12%, rgba(14, 111, 115, 0.2), transparent 32%),
-          #f6efe3;
+          radial-gradient(circle at 12% 0%, rgba(1, 118, 211, 0.16), transparent 30%),
+          radial-gradient(circle at 88% 12%, rgba(1, 68, 134, 0.14), transparent 32%),
+          linear-gradient(180deg, #f8fbfd 0%, #edf3f5 100%);
       }
 
       main {
@@ -38,8 +39,8 @@
         padding: 46px;
         border: 1px solid var(--line);
         border-radius: 34px;
-        background: rgba(255, 250, 240, 0.86);
-        box-shadow: 0 30px 90px rgba(33, 44, 42, 0.14);
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 26px 70px rgba(24, 42, 55, 0.13);
       }
 
       .badge {
@@ -47,8 +48,8 @@
         margin-bottom: 18px;
         padding: 9px 13px;
         border-radius: 999px;
-        background: rgba(14, 111, 115, 0.1);
-        color: var(--teal);
+        background: var(--accent-soft);
+        color: var(--accent-deep);
         font-size: 13px;
         font-weight: 800;
         letter-spacing: 0.08em;
@@ -80,7 +81,7 @@
       }
 
       a {
-        color: var(--teal);
+        color: var(--accent-deep);
         font-weight: 800;
       }
 
@@ -88,7 +89,7 @@
         margin: 22px 0;
         padding: 20px;
         border-radius: 24px;
-        background: rgba(95, 127, 104, 0.1);
+        background: var(--accent-soft);
       }
 
       .top-links {
@@ -105,7 +106,7 @@
         padding: 11px 16px;
         border: 1px solid var(--line);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.46);
+        background: rgba(255, 255, 255, 0.72);
         text-decoration: none;
       }
     </style>
@@ -131,7 +132,7 @@
 
         <h2>Data the Extension Handles</h2>
         <p>The extension may display and locally cache Salesforce CLI org metadata available on the user's machine, including org aliases, usernames, org IDs, instance URLs, project names, and Salesforce CLI status information.</p>
-        <p>The extension also stores local preferences such as favorites, custom org groups, expanded UI sections, theme preference, project root folders, and cache duration.</p>
+        <p>The extension also stores local preferences such as favorites, custom org groups, expanded UI sections, theme preference, optional project root folders, and cache duration.</p>
 
         <h2>How Data Is Stored</h2>
         <p>Extension settings and cached org metadata are stored in Chrome extension local storage on the user's device.</p>
@@ -149,7 +150,8 @@
         <p>The extension does not request permission to read or change data on all websites.</p>
 
         <h2>Companion Native Host</h2>
-        <p>Chrome extensions cannot silently install native messaging hosts. Users must install the companion native host once per machine. The native host runs locally and is required for Salesforce CLI integration.</p>
+        <p>Chrome extensions cannot silently install native messaging hosts. Users install the companion native host once per machine, usually with the one-line Node.js setup command. The native host runs locally and is required for Salesforce CLI integration.</p>
+        <p>Project folder scanning is optional. When it is off, Refresh reads Salesforce CLI orgs without scanning protected folders such as Desktop, Documents, or Downloads.</p>
 
         <h2>Data Removal</h2>
         <p>Users can remove stored extension data by uninstalling the extension from Chrome. Users can also uninstall the companion native host using the platform-specific uninstall process or by removing the installed native host files and registry or manifest entry.</p>
