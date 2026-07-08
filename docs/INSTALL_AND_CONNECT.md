@@ -64,6 +64,8 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 
 The installer detects macOS, Windows, or Linux and runs the correct companion setup automatically. On Windows, it also runs a native-host smoke test so CLI detection problems are caught during install instead of only inside Chrome.
 
+When install completes successfully, you should see one final instruction to open the Chrome extension and click **Refresh**.
+
 The companion installer refreshes Chrome's native messaging manifest for the published Web Store extension and known launcher builds:
 
 ```text
@@ -93,7 +95,7 @@ chmod +x install-mac-linux.sh
 ./install-mac-linux.sh
 ```
 
-If macOS asks whether `native-launcher` can access Desktop, Documents, Downloads, or another protected folder, click **Allow** when your Salesforce projects are stored there. This is an Apple privacy permission, not a Chrome permission.
+By default, Refresh does not scan project folders. If you enable **Optional: scan project folders** in Settings and include Desktop, Documents, Downloads, or another protected folder, macOS may ask whether `native-launcher` can access that folder. Click **Allow** only when your Salesforce projects are stored there. This is an Apple privacy permission, not a Chrome permission.
 
 ### Linux
 
@@ -179,7 +181,7 @@ Use this only if your IT team wants to rebuild the Windows installer from source
 1. Open Chrome.
 2. Click the Salesforce CLI Org Launcher extension icon.
 3. Click **Refresh**.
-4. Confirm your Salesforce CLI orgs appear.
+4. Confirm your Salesforce CLI authenticated orgs appear.
 5. Click **Open** on an org.
 
 ## Step 5: Create Groups
@@ -189,6 +191,8 @@ Use this only if your IT team wants to rebuild the Windows installer from source
 3. Create a group.
 4. Add orgs to the group from the launcher.
 5. Reopen the extension and confirm the group is still available.
+
+The launcher can also create starter groups from username domains, such as grouping `user@northwind.example`, `user@northwind.example.dev`, and `user@northwind.example.test` together. These groups are created once, then you can edit or delete them like any other group.
 
 Groups, favorites, settings, and collapsed sections are saved locally in Chrome storage.
 
@@ -240,7 +244,7 @@ Then click **Refresh** in the extension.
 
 ### macOS Keeps Asking for Folder Permission
 
-macOS controls access to protected folders such as Desktop, Documents, and Downloads. Allow access for folders where your Salesforce projects live. To reduce prompts, keep Salesforce project roots in a dedicated development folder and configure that folder in extension settings.
+macOS controls access to protected folders such as Desktop, Documents, and Downloads. The extension keeps optional project scanning off by default, so normal Refresh should not scan those folders. If you enable project scanning, allow access only for folders where your Salesforce projects live. To reduce prompts, keep Salesforce project roots in a dedicated development folder and configure that folder in extension settings.
 
 ### No Orgs or Missing Projects
 

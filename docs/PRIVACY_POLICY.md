@@ -25,7 +25,7 @@ The extension also stores local preferences, including:
 - Custom org groups
 - Expanded or collapsed UI sections
 - Theme preference
-- Project root folders
+- Optional project root folders
 - Cache duration
 
 ## How Data Is Stored
@@ -51,7 +51,9 @@ The extension does not request permission to read or change data on all websites
 
 ## Companion Native Host
 
-Chrome extensions cannot silently install native messaging hosts. Users must install the companion native host once per machine. The native host runs locally and is required for Salesforce CLI integration.
+Chrome extensions cannot silently install native messaging hosts. Users install the companion native host once per machine, usually with the one-line Node.js setup command. The native host runs locally and is required for Salesforce CLI integration.
+
+Project folder scanning is optional. When it is off, Refresh reads Salesforce CLI orgs without scanning protected folders such as Desktop, Documents, or Downloads.
 
 ## Data Removal
 

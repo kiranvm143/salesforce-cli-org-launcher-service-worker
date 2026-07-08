@@ -16,19 +16,6 @@ docs/index.html
 
 It presents the extension as a product page with screenshots, install flow, downloads, privacy notes, and user guidance.
 
-## Download
-
-Choose the package for your operating system:
-
-| Operating system | Download |
-| --- | --- |
-| macOS or Linux | [`downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip`](downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip) |
-| Windows one-click installer | [`downloads/SalesforceCliOrgLauncherCompanionSetup.exe`](downloads/SalesforceCliOrgLauncherCompanionSetup.exe) |
-| Windows portable install | [`downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip) |
-| Windows installer builder | [`downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip) |
-
-Most Windows users should use `SalesforceCliOrgLauncherCompanionSetup.exe`. The installer builder source is kept for managed IT teams that want to rebuild the installer themselves.
-
 ## Quick Install
 
 1. Install **Salesforce CLI Org Launcher** from the [Chrome Web Store](https://chromewebstore.google.com/detail/salesforce-cli-org-launch/nmjgfcdchchicaophfglfeijceibpkde).
@@ -42,7 +29,20 @@ npx --yes github:kiranvm143/salesforce-cli-org-launcher-service-worker install
 
 5. Open the Chrome extension and click **Refresh**.
 
-The command detects macOS, Windows, or Linux and runs the correct bundled installer. On Windows it also smoke-tests the native host and Salesforce CLI detection before finishing. The ZIP files below remain available for manual installation or managed IT distribution.
+The command detects macOS, Windows, or Linux and installs the correct companion package. On Windows it also smoke-tests the native host and Salesforce CLI detection before finishing.
+
+## Manual Downloads
+
+Use these only when your company blocks `npx` or requires managed/offline distribution:
+
+| Operating system | Download |
+| --- | --- |
+| macOS or Linux | [`downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip`](downloads/SalesforceCliOrgLauncherCompanion-mac-linux.zip) |
+| Windows setup app | [`downloads/SalesforceCliOrgLauncherCompanionSetup.exe`](downloads/SalesforceCliOrgLauncherCompanionSetup.exe) |
+| Windows portable install | [`downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-portable.zip) |
+| Windows installer builder | [`downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip`](downloads/SalesforceCliOrgLauncherCompanion-windows-installer-source.zip) |
+
+Most users should use the one-command installer. The Windows setup app and installer builder source are kept for managed IT teams that want package-based distribution or rebuilds.
 
 Full instructions are in [docs/INSTALL_AND_CONNECT.md](docs/INSTALL_AND_CONNECT.md).
 
@@ -76,7 +76,7 @@ If the extension shows **CLI not detected** after install, rerun the one-command
 
 - End-user companion install ZIP files for macOS, Linux, and Windows.
 - A Node.js `npx` installer that chooses the right companion package for the current operating system.
-- A one-click Windows `.exe` installer and installer-builder source for managed distribution.
+- A Windows `.exe` setup app and installer-builder source for managed distribution.
 - Native messaging setup documentation.
 - Privacy policy hosted through GitHub Pages.
 - Public service worker source and documentation for transparency.

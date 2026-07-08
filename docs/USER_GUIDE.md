@@ -13,6 +13,8 @@ The extension opens the selected org in a new Chrome tab.
 
 Search updates results while you type and keeps keyboard focus in the search box.
 
+The launcher shows Salesforce CLI authenticated orgs first. Project folder scanning is optional and can be enabled from **Settings** if you want project context.
+
 ## Org Actions
 
 Each org card can show these actions depending on the org status:
@@ -22,7 +24,9 @@ Each org card can show these actions depending on the org status:
 - **Authorize Again**: starts Salesforce CLI web login for expired or unreachable orgs.
 - **Check Again**: refreshes only org connection status.
 - **Remove Org**: removes the local Salesforce CLI authorization after confirmation. This does not delete the Salesforce org.
-- Copy buttons: copy username, org ID, or instance URL.
+- Inline copy icons: copy username, org ID, instance URL, or a CLI-generated temporary login URL.
+
+Treat copied launch URLs carefully. Anyone with the link may be able to open the org until the temporary URL expires.
 
 ## Refreshing Orgs
 
@@ -52,18 +56,22 @@ Typical examples:
 
 Create and manage groups from **Settings**. After a group is created, add orgs to it from the launcher. Groups are saved locally and remain available the next time you open the extension.
 
+The launcher can create starter groups from username domains. For example, `user@northwind.example`, `user@northwind.example.dev`, and `user@northwind.example.test` can be grouped together automatically. Auto-created groups are created once and can be edited or deleted by you.
+
 ## Settings
 
 Use **Settings** to manage:
 
 - Auth new org through Salesforce CLI web auth.
 - Project root folders.
+- Optional project folder scanning.
 - Theme.
 - Cache duration.
 - Auto-refresh behavior.
 - Custom org groups.
+- Temporary login URL copy warnings.
 
-Project roots tell the companion host where to look for local Salesforce projects.
+Project roots tell the companion host where to look for local Salesforce projects when optional project scanning is enabled. Optional scanning is off by default so Refresh does not access protected folders such as Desktop, Documents, or Downloads unless you choose to enable it.
 
 ## Expired Orgs
 
